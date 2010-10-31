@@ -2,6 +2,7 @@ require 'rubygems'
 require 'httparty'
 require 'hashie'
 require 'oauth'
+require 'json'
 
 Hash.send :include, Hashie::HashExtensions
 
@@ -113,7 +114,7 @@ module Foursquare
     
     def parse_response(response)
       raise_errors(response)
-      Crack::JSON.parse(response.body)
+      JSON.parse(response.body)
     end
     
     def to_query_params(options)

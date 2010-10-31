@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     ['httparty', '>= 0.4.3'],
     ['hashie', '>= 0.1.8'],
     ['oauth', '>= 0.3.5'],
+    ['json', '>= 1.4.6'],
   ]
 
   dependencies.each do |dep|
